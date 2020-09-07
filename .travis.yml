@@ -2,10 +2,10 @@ services:
     - docker
 
 before_install:
-    - docker build -t VIO -f Dockerfile.dev .
+    - docker build -t vio -f Dockerfile.dev .
 
 script:
-    - docker run VIO npm run test -- -- coverage
+    - docker run vio npm run test -- -- coverage
 
 deploy:
     provider: elasticbeanstalk
